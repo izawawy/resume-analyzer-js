@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4493295496300003"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <h1>AI Resume Analyzer</h1>
+        <p>Paste a job description and upload your resume to see how well you match.</p>
+        
+        <form id="analyzer-form">
+            <div class="form-group">
+                <label for="jd_text">Job Description</label>
+                <textarea id="jd_text" name="jd_text" rows="10" placeholder="Paste the full job description here..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="resume_file">Your Resume</label>
+                <input type="file" id="resume_file" name="resume_file" accept=".pdf,.doc,.docx,.txt">
+            </div>
+            
+            <button type="submit" id="analyze-button">Analyze</button>
+        </form>
+        
+        <div id="results-container" class="hidden">
+            <h2>Analysis Results</h2>
+            <div id="score"></div>
+            <div id="matched-keywords"></div>
+            <div id="missing-keywords"></div>
+        </div>
+
+        <div id="error-container" class="hidden">
+            <h2>Error</h2>
+            <p id="error-message"></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
